@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+
+    <style>
+      * {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: hsl(225, 100%, 94%);
+      }
+      .container {
+        width: 380px;
+        height: 550px;
+        margin: 200px auto;
+        text-align: center;
+        background: white;
+        border-radius: 25px;
+      }
+
+      .container .header img {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 25px 25px 0 0;
+      }
+      .container .content h2 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 900;
+      }
+      .container .content p {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(224, 23%, 55%);
+      }
+
+      .container .content h2,
+      p,
+      .annual-plan-box {
+        margin-bottom: 15px;
+      }
+      .container .btn {
+        margin-top: 15px;
+      }
+      .container .content .annual-plan-box {
+        border: 0px solid black;
+        height: 90px;
+        position: relative;
+        padding: 10px;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 14px;
+        background: hsl(225, 100%, 98%);
+      }
+      .container .content .annual-plan-box span {
+        display: inline-block;
+        padding: 10px 10px;
+        position: absolute;
+      }
+      .container .content .annual-plan-box span h5 {
+        color: hsl(224, 23%, 55%);
+      }
+      .container .content .annual-plan-box .music-icon {
+        left: 7px;
+      }
+      .container .content .annual-plan-box .plan {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        left: 73px;
+        top: 10px;
+      }
+      .container .content .annual-plan-box .btn0 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        top: 20px;
+        right: 7px;
+      }
+      .container .content .annual-plan-box .btn0::before {
+        content: "";
+        width: 60px;
+        color: hsl(223, 47%, 23%);
+        background: hsla(225, 100%, 94%, 0);
+        height: 20px;
+        position: absolute;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .container .content .annual-plan-box .btn0:hover::before {
+        background: hsla(225, 100%, 94%, 0.3);
+      }
+      .container .content .annual-plan-box .btn0 a {
+        text-decoration: underline;
+        color: hsl(245, 75%, 52%);
+      }
+      .container .content .annual-plan-box .btn0:hover a {
+        text-decoration: none;
+      }
+
+      .container .btn .btn1 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        border: 0px solid black;
+        padding: 10px 0;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background: hsl(245, 75%, 52%);
+        box-shadow: 0 10px 10px hsl(225, 100%, 94%);
+        position: relative;
+      }
+      .container .btn .btn1 a {
+        color: white;
+      }
+      .container .btn .btn1::before {
+        content: "";
+        border: 0px solid black;
+
+        width: 300px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 40px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      .container .btn .btn1:hover::before {
+        background: hsla(225, 100%, 98%, 0.3);
+      }
+
+      .container .btn .btn2 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        border: 0px solid black;
+        padding: 8px 0;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+      .container .btn .btn2 a {
+        color: hsl(224, 23%, 55%);
+        transition: all 0.3s ease-in-out;
+      }
+      .container .btn .btn2 a:hover {
+        color: black;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin: -195px auto;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <img src="./images/illustration-hero.svg" alt="" />
+      </div>
+      <section class="content">
+        <h2>Order Summary</h2>
+        <p>
+          You can now listen to millions of songs,<br />
+          audiobooks, and podcasts on any device <br />
+          anywhere you like!
+        </p>
+        <div class="annual-plan-box">
+          <span class="music-icon"
+            ><img src="./images/icon-music.svg" alt=""
+          /></span>
+          <span class="plan">
+            Annual Plan <br />
+            <h5>$59.99/year</h5></span
+          >
+          <span class="btn0"> <a href="">Change</a> </span>
+        </div>
+      </section>
+      <footer class="btn">
+        <div class="btn1"><a href="">Proceed to Payment</a></div>
+        <div class="btn2"><a href=""> Cancel Order</a></div>
+      </footer>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/lovishdtwts">Your Name Here</a>.
+    </div>
+  </body>
+</html>
